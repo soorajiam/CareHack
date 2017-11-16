@@ -1,105 +1,36 @@
-<div class="container body">
-    <div class="main_container">
-        <div class="col-md-3 left_col">
-            <div class="left_col scroll-view">
-                <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Panya</span></a>
-                </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eternity Medics </title>
 
-                <div class="clearfix"></div>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
-                <!-- menu profile quick info -->
-                <div class="profile clearfix">
-                   <!-- <div class="profile_pic">
-                        <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-                    </div>-->
-                    <div class="profile_info">
-                        <span>Welcome,</span>
-                        <h2><?php echo Session::get('Username'); ?></h2>
-                    </div>
-                </div>
-                <!-- /menu profile quick info -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
-                <br />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-                <!-- sidebar menu -->
-                <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                    <div class="menu_section">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-                        <ul class="nav side-menu">
+    <script type="text/javascript">
+        
+        $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+    </script>
+</head>
+<body>
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
-                            <li><a><i class="fa fa-edit"></i> Request <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="{{action('AccountantController@reqtablecreate')}}">Edit User Requests <span class="fa fa-chevron-right"></span></a>
-                                    </li>
-                                    <li><a href="{{action('AccountantController@requestcreate')}}">Requests<span class="fa fa-chevron-right"></span></a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li><a href="{{action('AccountantController@paymentcreate')}}"><i class="fa fa-pencil-square-o"></i> Payments<span class="fa fa-chevron-right"></span></a>
-
-                            </li>
-                            <li><a href="{{action('AccountantController@receiptcreate')}}"><i class="fa fa-file-text"></i> Receipts <span class="fa fa-chevron-right"></span></a>
-                            </li>
-
-                            <li><a><i class="fa fa-cart-plus"></i> Purchase<span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="{{action('AccountantController@quantitiescreate')}}">Quantity Details<span class="fa fa-chevron-right"></span></a>
-                                    </li>
-                                    <li ><a href="{{action('AccountantController@purchasecreate')}}">Purchases<span class="fa fa-chevron-right"></span></a>
-                                    </li>
-
-                                </ul>
-                            </li>
-
-                            <li><a><i class="fa fa-file-text"></i> Sales<span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="{{action('AccountantController@quantitycreate')}}">Quantity Details<span class="fa fa-chevron-right"></span></a>
-                                    </li>
-                                    <li ><a href="{{action('AccountantController@salecreate')}}">Sales<span class="fa fa-chevron-right"></span></a>
-                                    </li>
-
-                                </ul>
-                            </li>
-
-                            <li><a href="{{action('AccountantController@notifycreate')}}"><i class="fa fa-bullhorn"></i> Notifications<span class="fa fa-chevron-right"></span></a>
-
-                            </li>
-
-                            <li><a href="{{action('AccountantController@stockcreate')}}"><i class="fa fa-line-chart"></i> Stock Transfer<span class="fa fa-chevron-right"></span></a>
-
-                            </li>
-
-
-
-
-                        </ul>
-
-
-
-
-                    </div>
-
-                </div>
-
-                <!-- /menu footer buttons -->
-                <!-- /menu footer buttons -->
-                <div class="sidebar-footer hidden-small">
-                    <a data-toggle="tooltip" data-placement="top" title="Settings">
-                        <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                        <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="Lock">
-                        <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-                    </a>
-                    <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-                    </a>
-
-                    <!-- /menu footer buttons -->
-                </div>
-            </div>
-        </div>
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+</div>
+          
+</body>
+</html>
+                                

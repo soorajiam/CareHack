@@ -9,12 +9,10 @@
   	<!-- Compiled and minified JavaScript -->
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-  	<script src="jquery-3.2.1.min.js"></script>
-
-
   	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   	<link rel="stylesheet" href="includes/css/style.css">
+
   	
   	<style type="text/css">
   		div.tab {
@@ -51,7 +49,25 @@ div.tab button.active {
     border: 1px solid #ccc;
     border-top: none;
 }
-  	</style>
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+</style>
 
   	<script type="text/javascript">
 
@@ -77,39 +93,94 @@ div.tab button.active {
 }	
 
 </script>
+
 </head>
-
 <body>
-	
-<nav>
-    <div class="nav-wrapper teal">
-      <div class="profile_info">
-                        <span>Welcome,</span>
-                        <!--Retrieve Name -->
-                        <h2></h2> 
-                    </div>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><img src="" alt="..." class="img-circle profile_img pull-xs-left"></li>
-        <i class="small material-icons black">settings_power</i>
-      
-      </ul>
-    </div>
-  </nav>
+<div>
+
+</div>
 
 
-<!--
      
-<div class="tab" style="border:none;background-color:white;box-shadow:none;">
+<div class="tab teal">
   <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
   <button class="tablinks" onclick="openCity(event, 'Doctors')">Doctors</button>
   <button class="tablinks" onclick="openCity(event, 'Departments')">Departments</button>
   <button class="tablinks" onclick="openCity(event, 'Appointments')">Appointments</button>
 </div>
 
-<div id="Home" class="tabcontent" >
-  <h3>Home</h3>
-  <p>London is the capital city of England.</p>
+<div id="Home" class="tabcontent center" >
+ <div class="card" style="padding-top:20px;">
+
+ <!--Name and Image -->
+  <img src="" alt="John" style="width:100px;" class="img-circle img-responsive ">
+  <h3> </h3>
+  <a href="logout.html"><i class="small material-icons">settings_power</i></a>  
+ </div>
+
+ <!--Upcoming Appointments-->
+
+<div>
+
+<div class="clearfix"></div>
+
+            <div class="row" style="padding-top:50px;">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h5>Upcoming Appointments</h5>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-striped jambo_table bulk_action">
+                            <thead>
+                                <tr class="headings">
+                                    <th>
+                                        <input type="checkbox" id="check-all" class="flat">
+                                    </th>
+                                    <th class="column-title">Doctor</th>
+                                    <th class="column-title">Time</th>
+                                    <th class="column-title">Date</th>
+                      
+                                    <th class="bulk-actions" colspan="7">
+                                        <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <!-- for loop -->
+                                <tr class="even pointer">
+                                    <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                    </td>
+                                    <td>dsdgsgd </td>
+                                    <td>dhsjdh</td>
+                                    <td>dhsd</td>
+                                    
+                            
+
+                                 </tr>
+
+                               <!--end for loop-->
+
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+</div>
+
 
 <div id="Doctors" class="tabcontent">
   <h3>Doctors</h3>
@@ -125,5 +196,7 @@ div.tab button.active {
   <h3>Appointmnets</h3>
   <p>Tokyo is the capital of Japan.</p>
 </div>
+
+
 </body>
 </html>
