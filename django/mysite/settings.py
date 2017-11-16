@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'authen',
+    'doctors',
     'django_twilio',
+    'django_forms_bootstrap',
 ]
 
 MIDDLEWARE = [
@@ -123,8 +125,3 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = '/authen/login/'
 LOGIN_REDIRECT_URL = '/authen/'
-
-TWILIO_ACCOUNT_SID = 'ACdc24db4de86d22f6677286488d7c7907'
-TWILIO_AUTH_TOKEN = '313414c65d07749da95b2201c26e4d83'
-
-SENDSMS_BACKEND = 'myapp.mysmsbackend.SmsBackend'

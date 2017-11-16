@@ -3,10 +3,11 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.core.urlresolvers import reverse
 
+
 # Create your models here.
 class Profile(models.Model):
     user = models.OneToOneField(User)
-    phone = models.IntegerField(unique=True)
+    phone = models.IntegerField()
     verfied = models.BooleanField(default=False)
     pincode = models.IntegerField(null=True,blank=True)
 
@@ -15,3 +16,4 @@ class Profile(models.Model):
 
     def __str__(self):
         return self.user.username
+

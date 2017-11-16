@@ -1,5 +1,11 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% block title %}Login{% endblock title %}
+{% block content %}
+<a href="{% url 'send_pin'%}" >Send PIN</a>
 <form action="{% url 'verify'%}" method="post">
     {% csrf_token %}
     {{ form }}
     <input type="submit" value="Submit" />
 </form>
+{% endblock %}

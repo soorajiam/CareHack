@@ -12,29 +12,36 @@ from django.conf import settings
 
 # Create your views here.
 
-def _send_pin():
+def _send_pin(pin):
     client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
     client.messages.create(to="+919447712257",
                            from_="+12193019189",
-                           body="Hello from Python!")
+                           body="Hello your pin is {0}!".format(pin))
 
-def testurl(request):
-    _send_pin()
-    return HttpResponse("Hello send ")
 
 @login_required
 def home(request):
     if request.user.profile.is_verfied():
-        return HttpResponse("Hello")
+        return render(request,"home.html")
     else:
         return redirect('verify')
+
+def send_pin(request):
+    _send_pin(request.user.profile.pincode)
+    form = VerifyForm()
+    return render(request, 'verify.html', {'form': form})
 
 @login_required
 def verify(request):
     if not request.user.profile.is_verfied():
         if request.method == 'POST':
             form = VerifyForm(request.POST)
-            if(request.user.profile.pincode == form.data.get('verno')):
+            print(form.data.get('verno'))
+            print(request.user.profile.pincode)
+            if(request.user.profile.pincode == int(form.data.get('verno'))):
+                profile = request.user.profile
+                profile.verfied = True
+                profile.save()
                 return HttpResponse("Success")
         else:
             form = VerifyForm()
@@ -61,6 +68,7 @@ def register(request):
             pin = random.sample(range(10**(5-1), 10**5), 1)[0]
             Profile.objects.create(user = user, phone = phoneno, pincode = pin)
             # redirect to a new URL:
+            _send_pin(pin)
             return HttpResponseRedirect('/authen')
 
     # if a GET (or any other method) we'll create a blank form
@@ -68,3 +76,6 @@ def register(request):
         form = SignUpForm()
 
     return render(request, 'signup.html', {'form': form})
+
+
+

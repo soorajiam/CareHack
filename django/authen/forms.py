@@ -4,7 +4,7 @@ from django.core.exceptions import ValidationError
 
 def UniquePhoneValidator(value):
     if Profile.objects.filter(phone__iexact=value).exists():
-        raise ValidationError('User with this Email already exists.')
+        raise ValidationError('User with this Number already exists.')
 
 class SignUpForm(forms.Form):
     username = forms.CharField(
@@ -18,7 +18,7 @@ class SignUpForm(forms.Form):
         widget=forms.PasswordInput(attrs={'class': 'form-control'}),
         label="Confirm your password",
         required=True)
-    phoneno = forms.CharField(required=True)
+    phoneno = forms.IntegerField(widget=forms.TextInput(attrs={'class': 'form-control'}),required=True)
     email = forms.CharField(
         widget=forms.EmailInput(attrs={'class': 'form-control'}),
         required=True,
