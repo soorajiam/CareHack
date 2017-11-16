@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Doctors{% endblock title %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-lg-9">
+
+      <div class="page-header">
+        <h1>Doctors</h1>
+      </div>
+
+      {% if not doctor %}
+        <p><strong>No doctor.</strong>
+      {% else %}
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+              <td><a href="#">{{ doctor.pk }}</a></td>
+              <td>{{ doctor.name }}</td>
+              <td>
+                <a class="btn btn-default btn-xs" href="#">Get Appointment</a>
+              </td>
+            </tr>
+
+        </tbody>
+      </table>
+        {% endif %}
+    </div>
+  </div>
+{% endblock %}

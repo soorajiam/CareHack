@@ -1,0 +1,15 @@
+.log
+{
+	padding-top: 100px;
+
+}
+
+.log:hover, .log:active, .log:focus
+{
+	background-color: blue;
+}
+
+.main
+{
+	background-color: blue;
+}
