@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Eternity Medics</title>
+   <head>
+      <title>Eternity Medics</title>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="css/style.css">
 
-	<!-- Compiled and minified CSS -->
- 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <style type="text/css">
+         .custom-card{
+         background-image: linear-gradient(to bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.1));
+         border:none;
+         background-color: transparent;
+         padding: 4em;
+         }
+         .custom-input:hover, .cumstom-icon:active, .custom-icon:focus
+         {
+         color:teal;
+         }
+         body
+         {
+          background-color:#455a64;
+         }
+         .container
+         {
+          padding:20px;
+         }
+      </style>
 
-  	<!-- Compiled and minified JavaScript -->
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script>
+         $(document).ready(function() {
+         $('select').material_select();
+         });
+      </script>
 
-  	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   </head>
 
-  	<script>
-  		$(document).ready(function() {
-    $('select').material_select();
-  });
-  	</script>
-</head>
-<body>
+   <body>
+      <div class="container center">
+         <div class="row">
+            <div class="col s4"> </div>
 
-<div class="container">
-<div class="row">
-	<div class="col-md-4">
-	</div>
+            <div class="card col s4 custom-card" style="padding-bottom:20px;">
+               <h4>Register with us!</h4>
+               <div class="input-field">
+                  <input type="text" placeholder="Name" name="name" class="custom-input validate" required="required"> </input>
+                  <input type="number" placeholder="Age"  name="age" class="custom-input validate" required="required"> </input>
+                  <div class="input-field">
+                     <select>
+                        <option value="1">Sex</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                     </select>
+                  </div>
+                  <input type="text" placeholder="Mobile" name="mobile" required="required" class="custom-input validate"> </input>
+                  <input type="text" placeholder="Email Id" name="email" required="required" class="validate"> </input>
+                  <input type="text" placeholder="Locality" name="locality" required="required" class="validate"> </input>
+               </div>
+               <button class="btn waves-effect waves-light blue" type="submit" name="action">Submit
+               <i class="material-icons right">send</i>
+               </button>
+            </div>
 
-	<div class="col-md-4">
-			<h1>Register with us!</h1>
-
-			<input type="text" placeholder="Name" name="name"> </input>
-			<input type="number" placeholder="Age"  name="age"> </input>
-			<div class="input-field">
-			<select>
-      			<option value="">Sex</option>
-      			<option value="1">Male</option>
-      			<option value="2">Female</option>
-      			
-    		</select>
-    		</div>
-
-    		<input type="text" placeholder="Mobile" name="mobile"> </input>
-    		<input type="text" placeholder="Email Id" name="email"> </input>
-    		<input type="text" placeholder="Locality" name="locality"> </input>
-
-    		<button class="btn waves-effect waves-light blue" type="submit" name="action">Submit
-   			 	<i class="material-icons right">send</i>
-  			</button>
-
-
-			 
-	</div> 
-
-	<div class="col-md-4">
-	</div>
-</div>
-</div>
-
-</body>
+            <div class="col-md-4"></div>
+           
+         </div>
+      </div>
+   </body>
 </html>
