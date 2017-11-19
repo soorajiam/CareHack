@@ -4,9 +4,17 @@
       <title>Eternity Medics </title>
       <!-- Compiled and minified CSS -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
+      
+
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  
+   
+
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <style>
       </style>
@@ -20,16 +28,22 @@
          $(document).ready(function(){
          $('.carousel').carousel();
          });
+           
+          <script type="text/javascript">
+         $(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+});
              
       </script>
    </head>
    <body style="background-color:#26a69a;">
+   <div class="container-fluid">
       <div id="modal1" class="modal" style="width:400px;background-color:black;">
          <div class="modal-content center ">
             <h4 style="color:#26a69a">Jane Doe</h4>
             <img src="images/magic.jpeg" alt="" class="circle responsive-img " style=" height:70px;" >
             <ul>
-               <li><h5><a href="#" style="color:#26a69a;"> Appointments </a></h5></li>
+               <li><h5><a href="appointments.html" style="color:#26a69a;"> Appointments </a></h5></li>
                <li><a href="#" style="color:#26a69a"> Logout </a></li>
             </ul>
          </div>
@@ -41,7 +55,7 @@
          <div class="nav-wrapper">
             <a href="#!" class="brand-logo" style="padding-left:10px;">Eternity</a>
             <ul class="right hide-on-med-and-down">
-               <li><a href="#"><i class="material-icons left">home</i>Homw</a></li>
+               <li><a href="#"><i class="material-icons left">home</i>Home</a></li>
                <li><a href="doctors.html"><i class="material-icons left">local_hospital</i>Doctors</a></li>
                <li><a href="departments.html"><i class="material-icons left">widgets</i>Departments</a></li>
                <li>
@@ -55,11 +69,11 @@
 
       <div class="container-fluid" style="padding-top:70px;">
       <!--Collapsible-->
-         <ul class="collapsible" data-collapsible="accordion">
+         <ul class="collapsible" data-collapsible="accordion" >
             <li>
                <div class="collapsible-header">
                   <i class="large material-icons">assignment</i>
-                  <h6><b style="color:#ee6e73">Appointments</b></h6>
+                  <h6><b style="color:black">Appointments</b></h6>
                   <span class="new badge" data-badge-caption="upcoming">4</span>
                </div>
                <div class="collapsible-body" style="height:100%;background-color:white;">
@@ -120,7 +134,7 @@
             <li>
                <div class="collapsible-header">
                   <i class="large material-icons">business_center</i>
-                  <h6><b style="color:#ee6e73">Departments</b></h6>
+                  <h6><b style="color:black;">Departments</b></h6>
                </div>
                <div class="collapsible-body" style="height:100%">
                   <div class="carousel">
@@ -174,7 +188,7 @@
             <li>
                <div class="collapsible-header">
                   <i class="large material-icons">local_hospital</i>
-                  <h6><b style="color:#ee6e73">Top Doctors</b></h6>
+                  <h6><b style="color:black;">Top Doctors</b></h6>
                </div>
                <div class="collapsible-body" style="height:100%">
                   <div class="carousel">
