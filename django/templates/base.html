@@ -1,172 +1,82 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <title>Eternity Medics </title>
-      <!-- Compiled and minified CSS -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <!-- Compiled and minified JavaScript -->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <style>
-         a,
-         a:hover {
-         text-decoration: none;
-         }
-         /* Carousel */
-         .owl-carousel .carousel-item {
-         background: #fff;
-         border: 1px solid #D9D7DA;
-         text-align: center;
-         }
-         .owl-carousel .carousel-item-text {
-         padding: 12px;
-         }
-         .owl-carousel .carousel-item .item-kicker {
-         color: #9A5053;
-         display: block;
-         font-size: .8em;
-         font-weight: 600;
-         height: 30px;
-         margin-bottom: 16px;
-         overflow: hidden;
-         text-transform: uppercase;
-         }
-         .owl-carousel .carousel-item .item-title {
-         color: #646464;
-         font-size: 1em;
-         font-weight: 600;
-         height: 38px;
-         margin: 0;
-         overflow: hidden;
-         }
-         .owl-dots {
-         margin-top: 40px;
-         text-align: center;
-         width: 100%;
-         -webkit-backface-visibility: hidden;
-         -moz-backface-visibility: hidden;
-         -ms-backface-visibility: hidden;
-         backface-visibility: hidden;
-         }
-         .owl-dot {
-         border-radius: 50px;
-         height: 10px;
-         width: 10px;
-         display: inline-block;
-         background: rgba(127, 127, 127, 0.5);
-         margin-left: 5px;
-         margin-right: 5px;
-         }
-         .owl-dot.active {
-         background: rgba(127, 127, 127, 1);
-         }
-         /* Tabs */
-         .nav-tabs {
-         list-style: none;
-         margin: 0;
-         padding: 0;
-         }
-         .nav-tabs>li {
-         display: block;
-         position: relative;
-         text-align: center;
-         }
-         .nav-tabs>li:last-child {
-         margin-right: 0;
-         }
-         .tab-content {
-         display: inline-block;
-         }
-         .tab-content .tab-pane {
-         display: none;
-         }
-         .tab-content .tab-pane.active {
-         display: block;
-         }
-         .owl-item
-         {
-         width:1000px;
-         }
-      </style>
-      <script>
-         $(document).ready(function(){
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}CareHack{% endblock %}</title>
+      {% load staticfiles %}
+    <!--<link rel="icon" type="image/png" href="{% static 'img/favicon.ico' %}"> -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-          $('.modal').modal();
-          });
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    {% block page_css %}{% endblock %}
+      {% block page_js %}{% endblock %}
+  </head>
+  <body>
+    {% block body %}
+      <header>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container">
 
-          $(document).ready(function(){
-          $('.carousel').carousel();
-          });
+              <!-- Header -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">CareHack</a>
+            </div>
 
-          $(document).ready(function(){
-         $('.owl-carousel').owlCarousel({
-         loop: true,
-         margin: 30,
-         dots: true,
-         nav: false,
-         responsiveClass: true,
-         responsive: {
-         0: {
-         items: 2,
-         margin: 10,
-         stagePadding: 20,
-         },
-         600: {
-         items: 3,
-         margin: 20,
-         stagePadding: 50,
-         },
-         1000: {
-         items: 4
-         }
-         }
-         });
-         });
+              <!-- Items -->
+            <div class="collapse navbar-collapse" id="menu">
 
-      </script>
-   </head>
-   <body style="background-color:#26a69a;">
-   <main>
-      <div class="container-fluid">
-      <div id="modal1" class="modal" style="width:400px;background-color:black;">
-         <div class="modal-content center ">
-            <h4 style="color:#26a69a">Jane Doe</h4>
-            <img src="images/girl.jpg" alt="" class="circle responsive-img " style=" height:70px;" >
-            <ul>
-               <li>
-                  <h5><a href="appointments.html" style="color:#26a69a;"> Appointments </a></h5>
-               </li>
-               <li><a href="#" style="color:#26a69a"> Logout </a></li>
-            </ul>
-         </div>
-         <div class="modal-footer">
-            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat material-icons">close</a>
-         </div>
-      </div>
-      <nav>
-         <div class="nav-wrapper">
-            <a href="#!" class="brand-logo" style="padding-left:10px;">Eternity</a>
-            <ul class="right hide-on-med-and-down">
-               <li><a href="#"><i class="material-icons left">home</i>Home</a></li>
-               <li><a href="doctors.html"><i class="material-icons left">local_hospital</i>Doctors</a></li>
-               <li><a href="departments.html"><i class="material-icons left">widgets</i>Departments</a></li>
-               <li>
-                  <a href="#modal1" class="modal-trigger">
-                     <div class="chip" style="background-color:transparent;color:white;"> Hi! Jane Doe <img src="data:image/jpeg;base64,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" alt="Contact Person"> </div>
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="#" id="notifications" data-container="body" data-toggle="popover" data-placement="bottom" title="Notifications">
+                    <span class="glyphicon glyphicon-bell"></span>
                   </a>
-               </li>
-            </ul>
-         </div>
-      </nav>
+                </li>
+                <li><a href="#">Menu1</a></li>
+                <li><a href="#">Menu2</a></li>
+              </ul>
+              {% if user.is_authenticated %}
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="#">{{ user.profile.get_screen_name }}</a>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#}">Account Settings</a></li>
+                    <li class="divider"></li>
+                    <li><a href="{% url 'logout' %}">Log out</a></li>
+                  </ul>
+                </li>
+              </ul>
+              {% endif %}
+            </div>
+          </div>
+        </nav>
+      </header>
+      <main>
+      <div class="container pagetitle">
+        <div class="container">
+        <br>
+        <br>
+        <br>
           {% block content %}
           {% endblock content %}
         </div>
         </div>
       </main>
-
+    {% endblock body %}
   </body>
 </html>
