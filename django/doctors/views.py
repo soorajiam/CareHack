@@ -37,5 +37,8 @@ def create_appointment(request, pk):
 def main(request):
     dept=Department.objects.all()
     doc=Doctor.objects.all()
-    app=Appointment.objects.all(user=request.user)
-    return render(request,'main.html',{'dept':dept,'doc':doc,'app':app})
+    app=Appointment.objects.all().filter(user=request.user)
+    i=0
+    for a in app:
+        i=i+1
+    return render(request,'main.html',{'dept':dept,'doc':doc,'app':app.'i':i})

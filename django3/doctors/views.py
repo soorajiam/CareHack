@@ -1,6 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from .models import Doctor,Appointment
+from .models import Doctor,Appointment,Department
 from .forms import AppointmentForm
 from django.http import HttpResponse
 # Create your views here.
@@ -42,5 +42,5 @@ def create_appointment(request, pk):
 def main(request):
     dept=Department.objects.all()
     doc=Doctor.objects.all()
-    app=Appointment.objects.all(user=request.user)
+    app=Appointment.objects.all().filter(user=request.user)
     return render(request,'main.html',{'dept':dept,'doc':doc,'app':app})

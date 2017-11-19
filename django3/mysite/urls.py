@@ -19,7 +19,9 @@ import doctors.views as doc_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
     url(r'^authen/', include('authen.urls')),
     url(r'^doctors/', include('doctors.urls')),
     url(r'^view/$', doc_views.view_appointments, name='view_appointments'),
+    url(r'^$', doc_views.main, name='main'),
 ]

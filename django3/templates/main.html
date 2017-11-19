@@ -8,89 +8,26 @@
                <div class="collapsible-header">
                   <i class="large material-icons">assignment</i>
                   <h6><b style="color:black">Appointments</b></h6>
-                  <span class="new badge" data-badge-caption="upcoming">4</span>
+                  <span class="new badge" data-badge-caption="upcoming">{{i}}</span>
                </div>
                <div class="collapsible-body" style="height:100%;background-color:white;">
                   <div class="owl-carousel owl-theme">
                      <!--for loop -->
+                     {% for i in app %}
                      <div class="carousel-item">
                         <a href="#">
                            <div class="carousel-item-image">
                               <img src="images/doc.jpg" class="item-image">
                            </div>
                            <div class="carousel-item-text">
-                              <span class="item-kicker">Doctor:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <h3 class="item-title">Time:</h3>
+                              <span class="item-kicker">{{i.doctor.name}}:</span>
+                              <h3 class="item-title">{{i.doctor.department.name}}:</h3>
+                              <h3 class="item-title">{{i.time}}:</h3>
                               <a class="waves-effect waves-light btn red" href="bookappointments.html"><i class="material-icons left">close</i>Cancel</a>
                            </div>
                         </a>
                      </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Doctor:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <h3 class="item-title">Time:</h3>
-                              <a class="waves-effect waves-light btn red" href="bookappointments.html"><i class="material-icons left">close</i>Cancel</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Doctor:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <h3 class="item-title">Time:</h3>
-                              <a class="waves-effect waves-light btn red" href="bookappointments.html"><i class="material-icons left">close</i>Cancel</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Doctor:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <h3 class="item-title">Time:</h3>
-                              <a class="waves-effect waves-light btn red" href="bookappointments.html"><i class="material-icons left">close</i>Cancel</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Doctor:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <h3 class="item-title">Time:</h3>
-                              <a class="waves-effect waves-light btn red" href="bookappointments.html"><i class="material-icons left">close</i>Cancel</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Doctor:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <h3 class="item-title">Time:</h3>
-                              <a class="waves-effect waves-light btn red" href="bookappointments.html"><i class="material-icons left">close</i>Cancel</a>
-                           </div>
-                        </a>
-                     </div>
+                     {% endfor %}
                   </div>
                </div>
             </li>
@@ -104,73 +41,18 @@
                <div class="collapsible-body" style="height:100%;background-color:white;">
                   <div class="owl-carousel owl-theme">
                      <!--for loop -->
+                     {% for k in dept %}
                      <div class="carousel-item">
                         <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
+
                            <div class="carousel-item-text">
-                              <span class="item-kicker">Department:</span>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
+                              <span class="item-kicker">{{k.name}}</span>
+                              <a class="waves-effect waves-light btn" href="/doctors/view/1/getapp"><i class="material-icons left">add_circle</i>Book</a>
                            </div>
                         </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Department:</span>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Department:</span>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Department:</span>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Department:</span>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Department:</span>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
-                           </div>
-                        </a>
-                     </div>
+                     </div
                   </div>
+                  {% endfor %}
                </div>
             </li>
          </ul>
@@ -183,78 +65,18 @@
                <div class="collapsible-body" style="height:100%; background-color:white;">
                   <div class="owl-carousel owl-theme">
                      <!--for loop -->
+                     {% for j in doc %}
                      <div class="carousel-item">
                         <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
+
                            <div class="carousel-item-text">
-                              <span class="item-kicker">Name:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
+                              <span class="item-kicker">{{j.name}}</span>
+                              <h3 class="item-title">{{j.department.name}}</h3>
+                              <a class="waves-effect waves-light btn" href="/doctors/view/{{j.pk}}/getapp"><i class="material-icons left">add_circle</i>Book</a>
                            </div>
                         </a>
                      </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Name:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Name:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Name:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Name:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
-                           </div>
-                        </a>
-                     </div>
-                     <div class="carousel-item">
-                        <a href="#">
-                           <div class="carousel-item-image">
-                              <img src="images/doc.jpg" class="item-image">
-                           </div>
-                           <div class="carousel-item-text">
-                              <span class="item-kicker">Name:</span>
-                              <h3 class="item-title">Department:</h3>
-                              <a class="waves-effect waves-light btn" href="bookappointments.html"><i class="material-icons left">add_circle</i>Book</a>
-                           </div>
-                        </a>
-                     </div>
+                     {% endfor %}
                   </div>
                </div>
             </li>
