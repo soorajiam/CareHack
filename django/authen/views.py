@@ -32,7 +32,7 @@ def send_pin(request):
     return render(request, 'verify.html', {'form': form})
 
 @login_required
-def verify(request):
+def verify(request):             #Post data username 'username' , password 'password'
     if not request.user.profile.is_verfied():
         if request.method == 'POST':
             form = VerifyForm(request.POST)
