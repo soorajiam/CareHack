@@ -134,12 +134,12 @@
       <div id="modal1" class="modal" style="width:400px;background-color:black;">
          <div class="modal-content center ">
             <h4 style="color:#26a69a">Jane Doe</h4>
-            <img src="images/girl.jpg" alt="" class="circle responsive-img " style=" height:70px;" >
+
             <ul>
                <li>
-                  <h5><a href="appointments.html" style="color:#26a69a;"> Appointments </a></h5>
+                  <h5><a href="{% url 'view_appointments' %}" style="color:#26a69a;"> Appointments </a></h5>
                </li>
-               <li><a href="logout.html" style="color:#26a69a"> Logout </a></li>
+               <li><a href="{% url 'logout' %}" style="color:#26a69a"> Logout </a></li>
             </ul>
          </div>
          <div class="modal-footer">
@@ -150,10 +150,9 @@
          <div class="nav-wrapper">
             <a href="#!" class="brand-logo" style="padding-left:10px;">Eternity</a>
             <ul class="right hide-on-med-and-down">
-               <li><a href="#"><i class="material-icons left">home</i>Home</a></li>
-               <li><a href="doctors.html"><i class="material-icons left">local_hospital</i>Doctors</a></li>
-               <li><a href="departments.html"><i class="material-icons left">widgets</i>Departments</a></li>
-               <li><a href="bookappointments.html"><i class="material-icons left">add_circle</i>Book Appointments</a></li>
+               <li><a href="/#"><i class="material-icons left">home</i>Home</a></li>
+               <li><a href="{% url 'view_doctors' %}"><i class="material-icons left">local_hospital</i>Doctors</a></li>
+               <li><a href="{% url 'view_appointments' %}"><i class="material-icons left">add_circle</i>Book Appointments</a></li>
                <li>
                   <a href="#modal1" class="modal-trigger">
                      <div class="chip" style="background-color:transparent;color:white;"> Hi! Jane Doe <img src="images/girl.jpg" alt="Contact Person"> </div>
