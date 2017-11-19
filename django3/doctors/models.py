@@ -8,8 +8,18 @@ from pytz import timezone, utc
 from django.conf import settings
 
 # Create your models here.
+class Department(models.Model):
+    name = models.CharField(max_length=150)
+    description = models.CharField(max_length=500)
+    count=models.IntegerField(default=0)
+
+    def __str__(self):
+        return 'Department #{0} - {1}'.format(self.pk, self.name)
+
 class Doctor(models.Model):
     name = models.CharField(max_length=150)
+    department = models.ForeignKey(Department, on_delete=models.CASCADE, default=None, null=True)
+    qualifiaction=models.CharField(max_length=200,null=True)
 
     def __str__(self):
         return 'Doctor #{0} - {1}'.format(self.pk, self.name)

@@ -36,5 +36,3 @@ class Appointment(models.Model):
 
     def get_absolute_url(self):
         return reverse('view_appointment', args=[str(self.id)])
-
-
